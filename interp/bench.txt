@@ -1,0 +1,31 @@
+Without libraries:
+
+> (optimize-level 2)
+> (load "evalo.scm")
+...
+> (time (length (run 10000 (q) (evalo q '(i love you)))))
+running stats for (length (run 10000 (q) (evalo q '(i love you)))):
+    137 collections
+    3208 ms elapsed cpu time, including 914 ms collecting
+    3208 ms elapsed real time, including 915 ms collecting
+    1145453440 bytes allocated
+10000
+> (time (length (run 10000 (q) (evalo q '(i love you)))))
+running stats for (length (run 10000 (q) (evalo q '(i love you)))):
+    137 collections
+    3195 ms elapsed cpu time, including 927 ms collecting
+    3195 ms elapsed real time, including 928 ms collecting
+    1145441328 bytes allocated
+10000
+> (time (length (run 10000 (q) (evalo q '(i love you)))))
+running stats for (length (run 10000 (q) (evalo q '(i love you)))):
+    136 collections
+    3108 ms elapsed cpu time, including 851 ms collecting
+    3108 ms elapsed real time, including 852 ms collecting
+    1145453344 bytes allocated
+10000
+
+
+With libraries:
+
+
